@@ -18,24 +18,22 @@ Sample output
 The letter in the middle is B
 '''
 
-a = input("Enter the first letter: ")
-b = input("Enter the second letter: ")
-c = input("Enter the third letter: ")
-
-
-if a > b:
-    if a < c:
-        middle = a
-    elif b > c:
+a = input('Enter the first letter: ')
+b = input('Enter the second letter: ')
+c = input('Enter the third letter: ')
+middle = 0
+if a < b:
+    if b < c:
         middle = b
-    else:
+    elif a < c:
         middle = c
+    else:
+        middle = a
 else:
-    if a > c:
-        middle = a
-    elif b < c:
+    if b > c:
         middle = b
-    else:
+    elif a > c:
         middle = c
-
-print("The letter in the middle is", middle)
+    else:
+        middle = a
+print(f'The letter in the middle is {middle}')
